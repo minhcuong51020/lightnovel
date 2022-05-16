@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách</title>
+    <link rel="icon" href="/assets/img/favicon.png">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/slider.css">
+    <link rel="stylesheet" href="/assets/css/listContent.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/font/fontawesome/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <div class="page-on-top">
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+        <div class="header">
+            <div class="grid wide">
+                <div class="navbar">
+                    <button class="btn-menu">
+                        <i class="fa-solid fa-bars btn-menu-icon"></i>
+                    </button>
+                    <div class="navbar-logo">
+                        <a href="index.html" class="navbar-logo-link" style="background-image: url('/assets/img/logo.png');"></a>
+                    </div>
+                    <ul class="navbar-list navbar-menu hide-on-tablet hide-on-mobile">
+                        <li class="navbar-search hide-on-tablet hide-on-desktop">
+                            <input type="text" class="navbar-search-input" placeholder="Tối thiểu 2 kí tự">
+                            <button class="btn btn-search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#sangtac" class="navbar-item-link">Sáng tác</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#convert" class="navbar-item-link">Convert</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#xuatban" class="navbar-item-link">Xuất bản</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#thaoluan" class="navbar-item-link">Thảo luận</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="list.html" class="navbar-item-link">Danh sách</a>
+                        </li>
+                        <li class="navbar-item navbar-subnav">
+                            <a href="#" class="navbar-item-link">
+                                Hướng dẫn <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="subnav-list">
+                                <li class="subnav-item">
+                                    <a href="#dangtruyen" class="subnav-item-link">Đăng truyện</a>
+                                </li>
+                                <li class="subnav-item">
+                                    <a href="#gioithieu" class="subnav-item-link">Giới thiệu</a>
+                                </li>
+                                <li class="subnav-item">
+                                    <a href="#baoloi" class="subnav-item-link">Góp ý - Báo lỗi</a>
+                                </li>
+                                <li class="subnav-item">
+                                    <a href="#policy" class="subnav-item-link">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="navbar-search hide-on-mobile">
+                        <input type="text" class="navbar-search-input" placeholder="Tối thiểu 2 kí tự">
+                        <button class="btn btn-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <ul class="navbar-list">
+                        <li class="navbar-item" id="navbar-item-more">
+                            <a class="navbar-item-link">
+                                <i class="fa-solid fa-circle-chevron-down navbar-icon-more"></i>
+                            </a>
+                            <ul class="subnav-more-list">
+                                <li class="subnav-more-item">
+                                    <a href="#bg" class="subnav-more-item-link">Nền tối</a>
+                                </li>
+                                <li class="subnav-more-item">
+                                    <a href="#ls" class="subnav-more-item-link">Lịch sử</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#dangnhap" class="navbar-item-link">Đăng nhập</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider -->
+        <div class="slider">
+            <div class="slider-img" style="background-image: url('/assets/img/megumi-bg.jpg');">
+
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-main grid wide">
+                <div class="footer-contact">
+                    Liên hệ:
+                    <span class="footer-contact-content">contact@hako.re</span>
+                </div>
+                <div class="footer-app-created">
+                    © 2016 - 2022 Cổng Light Novel - Đọc Light Novel
+                </d>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var parentSubnav = document.querySelector('.navbar-item.navbar-subnav');
+        var subNav = document.querySelector('.subnav-list');
+        var menu = document.querySelector(".navbar-list.navbar-menu");
+        var btnMenu = document.querySelector(".btn-menu");
+        var navbarMore = document.getElementById("navbar-item-more");
+        var subnavMore = document.querySelector(".subnav-more-list");
+        var searchMobile = document.querySelector(".navbar-search.hide-on-tablet.hide-on-desktop")
+        var btnOnTop = document.querySelector(".page-on-top");
+
+        window.addEventListener('click', (e) => {
+            if (e.target.parentElement != null && e.target.parentElement.classList.contains("navbar-subnav")) {
+                e.preventDefault();
+            }
+            // Đóng menu con nếu đang mở
+            if (searchMobile.contains(e.target)) {
+                console.log(searchMobile.contains(e.target));
+                return;
+            }
+            if (subNav.classList.contains('action') == true) {
+                console.log(1);
+                subNav.classList.toggle('action');
+                // Nếu bấm ra ngoài thì sẽ tắt menu chính và phụ
+                // nếu vào menu con khác thì cũng tắt
+                // Nếu bấm vào các nút khác nút bật menu con thì sẽ đóng cả menu chính và menu phụ
+                if (e.target.parentElement == null) {
+                    menu.style.display = '';
+                } else if (navbarMore.contains(e.target)) {
+                    menu.style.display = '';
+                    subnavMore.classList.toggle("action");
+                }
+                else if (!e.target.parentElement.classList.contains("navbar-subnav")) {
+                    menu.style.display = '';
+                }
+                return;
+            }
+            var checkSubMenu = parentSubnav.contains(e.target);
+            if (checkSubMenu == true) {
+                console.log(2);
+                if (subnavMore.classList.contains("action")) {
+                    subnavMore.classList.toggle("action");
+                }
+                subNav.classList.toggle('action');
+                return;
+            }
+            var checkMenu = btnMenu.contains(e.target);
+            if (checkMenu == true && menu.style.display == 'flex') {
+                console.log(3);
+                menu.style.display = '';
+                return;
+            }
+
+            if (checkMenu && menu.style.display != 'flex') {
+                console.log(4);
+                if (subnavMore.classList.contains("action")) {
+                    subnavMore.classList.toggle("action");
+                }
+                menu.style.display = 'flex'
+
+                return;
+            }
+
+            if (checkMenu != true && menu.style.display == 'flex') {
+                console.log(5);
+                console.log(navbarMore.contains(e.target));
+                if (e.target.parentElement == null) {
+                    menu.style.display = '';
+                } else if (navbarMore.contains(e.target)) {
+                    menu.style.display = '';
+                    subnavMore.classList.toggle("action");
+                } else if (!e.target.parentElement.classList.contains("subnav")) {
+                    menu.style.display = '';
+                }
+                return;
+            }
+
+            if (subnavMore.classList.contains("action")) {
+                console.log(6);
+                subnavMore.classList.toggle("action");
+                return;
+            }
+
+            if (navbarMore.contains(e.target)) {
+                subnavMore.classList.toggle("action");
+            }
+        })
+
+        var index = 0;
+        function storyShow() {
+            console.log(index);
+            var widthScreen = window.innerWidth;
+            var maxDot = 1;
+            if (widthScreen >= 740) {
+                maxDot = 2;
+            } else if (widthScreen < 740) {
+                maxDot = 4;
+            }
+            var storys = document.querySelectorAll(".story-top-item-index");
+            var dots = document.querySelectorAll(".dot");
+            for (var i = 0; i < storys.length; i++) {
+                storys[i].classList.add("display-none");
+            }
+            for (var i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("dot-active")
+            }
+            var slideCount = 0;
+            var slideStart = 0
+            if (maxDot == 2) {
+                slideStart = index * 4;
+                slideCount = slideStart + 4;
+            } else if (maxDot == 4) {
+                slideStart = index * 2;
+                slideCount = slideStart + 2;
+            }
+            console.log(index);
+            console.log(slideStart);
+            console.log(slideCount);
+            dots[index].classList.add("dot-active");
+            for (var i = slideStart; i < slideCount; i++) {
+                storys[i].classList.remove("display-none");
+            }
+            index++;
+            console.log("end");
+            var lastDot = maxDot;
+            if (index == lastDot) {
+                index = 0;
+            }
+        }
+        storyShow(index = 0);
+        setInterval(storyShow, 10000);
+        var dotList = document.querySelectorAll(".dot");
+        console.log(dotList);
+        for (let i = 0; i < dotList.length; i++) {
+            dotList[i].onclick = function (e, x) {
+                var indexCurrent = this.textContent - 1;
+                storyShow(index = indexCurrent)
+            }
+        }
+
+        window.onscroll = function() {
+            if(document.body.scrollTop >= 300 || document.documentElement.scrollTop >= 300) {
+                btnOnTop.style.display = 'block';
+            } else {
+                btnOnTop.style.display = 'none';
+            }
+        }
+
+        btnOnTop.onclick = function() {
+            console.log(btnOnTop);
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
